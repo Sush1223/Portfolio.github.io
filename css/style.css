@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* nav bar styling */
+.navbar 
+{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background:darkblue;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 30px 0;
+    transition: all .3s ease;
+
+}
+.navbar .sticky{
+    padding: 30px 0;
+  background:crimson;
+  transition: all .3s ease;
+ 
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color:#fff;
+    font-size: 35px;
+    font-weight: 600;
+    
+}
+
+.navbar .logo a span{
+    color: crimson;
+    transition: all .3s ease;
+}
+
+.navbar .sticky .logo a span{
+    color: crimson;
+
+}
+
+
+ .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left:25px;
+
+
+}
+
+
+.navbar .menu li a:hover{
+    color: crimson;
+    transition: all .3s ease;
+}
+
+/* menu-btn*/
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    background: darkblue;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.home{
+    display: flex;
+    height: 100vh;
+    background-image: url(../bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+/*
+.home .image img{
+    height: 900px;
+    width: 700px;
+    
+    
+    
+}
+*/
+
+
+
+.home .max-width{
+    margin: auto 0 auto 40 px;
+
+}
+
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+    
+    
+
+}
+
+.home .home-content .text-4{
+    font-size: 40px;
+    margin: 5px 0;
+    color: crimson;
+    
+    
+
+}
+/* all similar styling code in one place*/
+
+section{
+    padding: 100px 0;
+}
+
+.about, .project, .skill, .achieve, .contact,footer{
+    font-family: 'Poppins',sans-serif;
+}
+
+.about .about-content, .project .project-content, .skill .skill-content, .contact .contact-cont {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+section .title::before{
+    content: "";
+   position: absolute; 
+   bottom: 0px;
+   left: 50%;
+    width: 189px;
+    height:3px ;
+    background: #111;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+section  .title::after{
+   
+   position: absolute; 
+   bottom: -14px;
+   left: 50%;
+   font-size: 20px;
+   color :crimson;
+   padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+
+}
+/* about section */
+
+
+
+
+
+
+.about .title::after{
+    content: "who i am";
+}
+
+
+.about .about-content .columnleft {
+    width:45%
+}
+
+.about .about-content .columnleft img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.about .about-content .columnright{
+    width: 55%;
+}
+.about .about-content .columnright .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.about .about-content .columnright .text span{
+
+    color: crimson;
+}
+.about .about-content .columnright p 
+
+{
+
+    text-align: justify;
+}
+.about .about-content .columnright a{
+    display: inline-block;
+    background: darkblue;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid darkblue;
+    transition: all .3s ease;
+}
+
+.about .about-content .columnright a:hover{
+    color: darkblue;
+    background: none;
+}
+
+/*projects*/
+
+.project, .achieve{
+    color: white;
+    background: #111;
+}
+.project .title::before,
+.achieve .title::before{
+    background: white;
+}
+.project .title::after,
+.achieve .title::after{
+    background: #111;
+   /* content: "Projects Done"; */
+
+}
+
+.project .project-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.project .project-content .card:hover{
+    background:crimson;
+}
+
+.project .project-content .card .box{
+    transition: all .3s ease;
+
+}
+.project .project-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.project .project-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.project .project-content .card:hover i{
+    color: #fff;
+}
+.project .project-content .card text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/*skills*/
+/*
+.skill .title::after{
+
+    content: "what i know";
+}
+*/
+
+.skill .skill-content .column{
+    width: calc(50% - 30px);
+}
+
+.skill .skill-content .left .text1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom:10px; 
+
+}
+.skill .skill-content .left p{
+    text-align: justify;
+}
+
+
+.skill .skill-content .right .bars{
+
+margin-bottom: 15px;
+
+}
+
+.skill .skill-content .right .infor{
+    display:flex ;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill .skill-content .right span{
+    font-weight:500 ;
+    font-size: 18px; 
+}
+.skill .skill-content .right .line{
+    height: 5px;
+    width:100%;
+    background: lightgray;
+    position: relative;
+}
+
+.skill .skill-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: darkblue; 
+
+}
+
+.skill-content .right .html::before{
+    width: 90%;
+
+}
+
+.skill-content .right .css::before{
+    width: 85%;
+}
+.skill-content .right .javascript::before{
+    width: 60%;
+}
+
+
+/* achievments */
+
+.achieve .title::after{
+    content: " I have";
+}
+
+.achieve .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 28x 45px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: all .3s ease;
+    cursor: pointer;
+    
+
+}
+
+.achieve .carousel .card:hover{
+    background:crimson;
+}
+
+.achieve .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+.achieve .carousel .card:hover .box{
+    transform: scale(1.02);
+}
+
+.achieve .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.achieve .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid darkblue;
+    justify-content: center;
+    transition: all .3s ease;
+}
+.achieve .carousel .card:hover img{
+    border-color:#fff ;
+   
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all .3s ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+}
+
+/* contact section */
+/*.contact .title::after{
+}
+
+*/
+.contact .contact-cont .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-cont .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}   
+
+.contact .contact-cont .left p{
+
+    text-align: justify;
+}
+.contact .contact-cont .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-cont .rowas{
+    display: flex;
+    height: 65px;
+    align-items: center;
+
+}
+
+.contact .contact-cont .rowas .info{
+    margin-left: 30px;
+
+
+}
+
+
+.contact .contact-cont .rowas i{
+    font-size: 25px;
+    color: darkblue;
+}
+
+.contact .contact-cont .info .head{
+    font-weight: 500;
+}
+.contact .contact-cont .info .sub-title{
+    color: #333;
+}
+
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width:100%;
+}
+
+.contact .right form .name
+{
+    margin-right: 10px;
+    
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+
+
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width:170px  ;
+}
+
+
+
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid darkblue;
+    background: darkblue;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .3s ease ;
+
+}
+.contact .right form .button button:hover{
+    color: darkblue;
+    background: none;
+   
+}
+
+/* footer */
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+footer span a{
+color: crimson;
+text-decoration: none;
+align-items: center;
+justify-content: center;
+
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+@media (max-width:1104px) {
+    
+    .about .about-content .columnleft img{
+        height: 350px;
+        width: 350px;
+       
+    }
+
+
+
+}
+
+
+@media (max-width:991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+
+}
+@media (max-width:1332px) {
+
+    
+    .max-width{
+        padding: 0 50px;
+    }
+
+
+    .menu-btn{
+        
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+
+    
+    
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top:0;
+        background:#111;
+        text-align: center;
+        padding-top: 80px; ;
+        transition: all .3s ease;
+
+    
+    
+    }
+
+
+
+
+    .navbar .menu.active{
+        left:0;
+        
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px ;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+        
+       
+    }
+    
+    .home .home-content .text-3{
+        font-size: 35px;
+        
+        
+    
+    }
+    .home .home-content .text-4{
+        font-size: 35px;
+       
+        color: crimson;
+    }
+
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .columnleft .columnright{
+        width: 100%;
+
+    }
+
+    .about .about-content .columnleft{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+
+    }
+    .about .about-content .columnright{
+        flex: 100%;
+    }
+    .project .project-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skill .skill-content .column,
+    .contact .contact-cont .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+
+@media (max-width:320px) {
+   
+
+
+    .home .home-content .text-2{
+        font-size: 50px;
+       
+    }
+    
+    .home .home-content .text-3{
+        font-size: 27px;
+        
+        
+    
+    }
+    .home .home-content .text-4{
+        font-size: 27px;
+       
+        color: crimson;
+        
+        
+    
+    }
+    .project .project-content .card,
+    .skill .skill-content .column{
+        width: 100%;
+    }
+    
+
+}
